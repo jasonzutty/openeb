@@ -1,0 +1,26 @@
+[project]
+name = "openeb"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "command-runner>=1.7.4",
+    "fire==0.4.0",
+    "h5py>=3.14.0",
+    "importlib-metadata>=6.0,<=7.1",
+    "kornia>=0.8.1",
+    "networkx<3",
+    "numba>=0.58.1,<0.60",
+    "opencv-python==4.5.5.64",
+    "pandas>=2.3.0",
+    "profilehooks==1.12.0",
+    "pytest>=8.4.0",
+    "pytorch-lightning==2.2.1",
+    "scikit-image>=0.24.0",
+    "scipy>=1.15.3",
+    "sk-video==1.1.10",
+    "tensorboard>=2.19.0",
+    "torch==2.2.1",
+    "torchvision==0.17.1",
+]

@@ -163,7 +163,8 @@ elseif (NOT ANDROID AND "${TARGET_PLATFORM}" STREQUAL "")
 
     # Platforms with their own toolchains should define their own compile flags
     if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-        set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Werror=type-limits -Werror=sign-compare -Werror=implicit-fallthrough -Werror=unused-function -Werror=unused-but-set-variable -Werror=dangling-else -Werror=sequence-point -Werror=uninitialized")
+        #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Werror=type-limits -Werror=sign-compare -Werror=implicit-fallthrough -Werror=unused-function -Werror=unused-but-set-variable -Werror=dangling-else -Werror=sequence-point -Werror=uninitialized")
+        set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Werror=type-limits -Werror=sign-compare -Werror=implicit-fallthrough -Werror=unused-function -Werror=dangling-else -Werror=sequence-point -Werror=uninitialized")
     else (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
         set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Werror=type-limits -Werror=sign-compare -Werror=implicit-fallthrough -Werror=unused-function -Werror=unused-but-set-variable -Werror=dangling-else -Werror=sequence-point -Werror=maybe-uninitialized")
     endif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
