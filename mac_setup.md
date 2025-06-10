@@ -37,10 +37,11 @@ I ran into an issue in the compilation due to unused-but-set-variables, so I mad
 
 Then I was able to build with:
 mkdir build && cd build
-`cmake .. -DBUILD_TESTING=OFF -DPython3_EXECUTABLE=../.venv/bin/python3`
+`cmake .. -DBUILD_TESTING=OFF -DPython3_EXECUTABLE=../.venv/bin/python3 -DCMAKE_INSTALL_PREFIX=.. DPYTHON3_SITE_PACKAGES=../.venv/lib/python3.12/site-packages -DPYTHON3_DEFAULT_VERSION=3.12`
 
 `cmake --build . --config Release -- -j 4`
 
-and then install locally with
-`cmake .. -DBUILD_TESTING=OFF -DPython3_EXECUTABLE=../.venv/bin/python3 -DCMAKE_INSTALL_PREFIX=.. DPYTHON3_SITE_PACKAGES=../.venv/lib/python3.12/site-packages -DPYTHON3_DEFAULT_VERSION=3.12`
+and then install locally with:
+`cmake --build . --target install`
+
 - Not all of these flags may have been needed but it took some manipulation to be able for it to install into the 3.12 virtual env instead of grabbing some 3.9 system python, I did not do an ablation study
